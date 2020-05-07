@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.amdev.lifehelper.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.amdev.lifehelper.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.amdev.lifehelper.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_plans"
+        android:name="com.amdev.lifehelper.planner.planslist.PlansFragment"
+        android:label="Plans/Reminders"
+        tools:layout="@layout/fragment_plans" >
+        <action
+            android:id="@+id/action_nav_plans_to_nav_addplans"
+            app:destination="@id/nav_addplans" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_addplans"
+        android:name="com.amdev.lifehelper.planner.plansadd.AddPlansFragment"
+        android:label="Add Plan/Reminder"
+        tools:layout="@layout/fragment_plansadd" >
+        <action
+            android:id="@+id/action_nav_addplans_to_nav_plans"
+            app:destination="@id/nav_plans" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_bdays"
+        android:name="com.amdev.lifehelper.bdays.bdayslist.BdaysFragment"
+        android:label="@string/birthdays"
+        tools:layout="@layout/fragment_bdays" >
+        <action
+            android:id="@+id/action_nav_bdays_to_nav_addbdays"
+            app:destination="@id/nav_addbdays" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_addbdays"
+        android:name="com.amdev.lifehelper.bdays.bdaysadd.AddBdaysFragment"
+        android:label="Add Birthdays"
+        tools:layout="@layout/fragment_bdaysadd" >
+        <action
+            android:id="@+id/action_nav_addbdays_to_nav_bdays"
+            app:destination="@id/nav_bdays" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_updateutilsubs"
+        android:name="com.amdev.lifehelper.utilsubs.utilsubupdate.UpdateUtilsubsFragment"
+        android:label="@string/menu_updateutilsubs"
+        tools:layout="@layout/fragment_utilsubsupdate" >
+        <action
+            android:id="@+id/action_nav_updateutilsubs_to_nav_utilsubs"
+            app:destination="@id/nav_utilsubs" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_utilsubs"
+        android:name="com.amdev.lifehelper.utilsubs.utilsubslist.UtilsubsFragment"
+        android:label="@string/menu_utilsubs"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_utilsubs_to_nav_addutilsubs"
+            app:destination="@id/nav_addutilsubs" />
+        <action
+            android:id="@+id/action_nav_utilsubs_to_nav_updateutilsubs"
+            app:destination="@id/nav_updateutilsubs" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_addutilsubs"
+        android:name="com.amdev.lifehelper.utilsubs.utilsubsadd.AddUtilsubsFragment"
+        android:label="@string/menu_addutilsubs" >
+        <action
+            android:id="@+id/action_nav_addutilsubs_to_nav_utilsubs"
+            app:destination="@id/nav_utilsubs" />
+    </fragment>
+</navigation>
