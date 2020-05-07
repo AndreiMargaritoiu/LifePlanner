@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="1"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/tv_amount"
+            android:text="Amount: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_provider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/tv_deadline"
+            android:maxLines="1"
+            android:text="Da"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorAccent"
+            android:ellipsize="end"
+            android:textSize="@dimen/dim20sp"/>
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deadline/Date: "
+            android:layout_below="@id/tv_provider"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_below="@id/tv_provider"
+            android:layout_toRightOf="@id/amount"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
